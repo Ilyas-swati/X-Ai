@@ -1,0 +1,6 @@
+{
+  "name": "X",
+  "description": "Live Voice-to-Voice AI Agent",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

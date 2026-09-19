@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Stylized Modern "X" with audio wave bars -->
+    <!-- Primary X Slash (Top-Left to Bottom-Right) -->
+    <path
+        android:pathData="M34,30 L44,30 L74,78 L64,78 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Secondary X Slash (Top-Right to Bottom-Left) with central energy gap -->
+    <path
+        android:pathData="M74,30 L64,30 L34,78 L44,78 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="74"
+                android:startY="30"
+                android:endX="34"
+                android:endY="78"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="0.5" android:color="#7C4DFF" />
+                <item android:offset="1.0" android:color="#00E5FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Center sonic core pulse dot -->
+    <path
+        android:pathData="M54,54m-4.5,0a4.5,4.5 0 1,0 9,0a4.5,4.5 0 1,0 -9,0"
+        android:fillColor="#00E5FF" />
+
+    <!-- Left soundwave pulse -->
+    <path
+        android:pathData="M24,46 L24,62"
+        android:strokeWidth="2.5"
+        android:strokeColor="#64B5F6"
+        android:strokeLineCap="round" />
+
+    <!-- Right soundwave pulse -->
+    <path
+        android:pathData="M84,46 L84,62"
+        android:strokeWidth="2.5"
+        android:strokeColor="#64B5F6"
+        android:strokeLineCap="round" />
+</vector>

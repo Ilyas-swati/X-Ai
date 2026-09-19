@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">X</string>
+    <string name="assistant_title">X Voice Agent</string>
+    <string name="status_ready">Tap microphone to start</string>
+    <string name="status_listening">Listening to you…</string>
+    <string name="status_thinking">Thinking…</string>
+    <string name="status_speaking">X is speaking (tap or speak to interrupt)</string>
+    <string name="status_interrupted">Interrupted</string>
+    <string name="status_connecting">Connecting live audio stream…</string>
+    <string name="status_error">Connection issue. Tap to retry.</string>
+    <string name="permission_mic_rationale">X needs microphone access to listen to your voice in real time.</string>
+    <string name="permission_notif_rationale">X uses notifications to maintain your voice conversation in the background.</string>
+    <string name="action_grant">Grant Permission</string>
+    <string name="action_start">Start Session</string>
+    <string name="action_stop">End Session</string>
+    <string name="action_mute">Mute</string>
+    <string name="action_unmute">Unmute</string>
+    <string name="bg_service_channel_name">X Voice Service</string>
+    <string name="bg_service_channel_desc">Active real-time voice session with X</string>
+    <string name="bg_notification_title">X Voice Agent Active</string>
+    <string name="bg_notification_text">Continuous live voice-to-voice is active</string>
+</resources>
