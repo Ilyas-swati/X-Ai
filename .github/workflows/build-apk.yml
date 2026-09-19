@@ -33,6 +33,30 @@ jobs:
       - name: Verify Gradle Version
         run: gradle --version
 
+      - name: Ensure Debug Keystore Exists
+        run: |
+          if [ ! -f "$GITHUB_WORKSPACE/debug.keystore" ]; then
+            if [ -f "$GITHUB_WORKSPACE/debug.keystore.base64" ]; then
+              echo "Restoring debug.keystore from base64..."
+              base64 -d "$GITHUB_WORKSPACE/debug.keystore.base64" > "$GITHUB_WORKSPACE/debug.keystore"
+            else
+              echo "Generating new debug.keystore using keytool..."
+              keytool -genkeypair \
+                -v \
+                -keystore "$GITHUB_WORKSPACE/debug.keystore" \
+                -storetype JKS \
+                -alias androiddebugkey \
+                -keyalg RSA \
+                -keysize 2048 \
+                -validity 10000 \
+                -storepass android \
+                -keypass android \
+                -dname "CN=Android Debug,O=Android,C=US"
+            fi
+          fi
+          test -f "$GITHUB_WORKSPACE/debug.keystore"
+          ls -l "$GITHUB_WORKSPACE/debug.keystore"
+
       - name: Build Debug APK with Gradle
         run: gradle :app:assembleDebug --stacktrace --no-daemon
 
